@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.MainPageController">
+   <children>
+      <Button layoutX="442.0" layoutY="72.0" mnemonicParsing="false" onAction="#cadastrarMorador" text="Cadastrar Moradores" />
+      <Button layoutX="181.0" layoutY="72.0" mnemonicParsing="false" onAction="#exibirPorCpf" text="Procurar" />
+      <Button layoutX="308.0" layoutY="72.0" mnemonicParsing="false" onAction="#exibirTodosMoradores" text="Consultar Moradores" />
+      <Label layoutX="340.0" layoutY="37.0" prefHeight="28.0" prefWidth="219.0" text="Portaria Condomínio">
+         <font>
+            <Font name="Arial Black" size="19.0" />
+         </font>
+      </Label>
+      <ScrollPane layoutX="31.0" layoutY="131.0" prefHeight="249.0" prefWidth="539.0">
+         <content>
+            <Pane fx:id="painelMoradores" prefHeight="248.0" prefWidth="540.0" />
+         </content>
+      </ScrollPane>
+      <Label fx:id="rotuloAp" alignment="CENTER" layoutX="37.0" layoutY="108.0" text="Apartamento" />
+      <Label fx:id="rotuloBloco" alignment="CENTER" layoutX="111.0" layoutY="108.0" prefHeight="17.0" prefWidth="51.0" text="Bloco" />
+      <Label fx:id="rotuloNome" alignment="CENTER" contentDisplay="CENTER" layoutX="160.0" layoutY="108.0" prefHeight="17.0" prefWidth="158.0" text="Nome" />
+      <Label fx:id="rotuloCpf" alignment="CENTER" layoutX="318.0" layoutY="108.0" prefHeight="17.0" prefWidth="136.0" text="CPF" />
+      <TextField fx:id="campoDeBusca" layoutX="32.0" layoutY="72.0" />
+      <Label layoutX="31.0" layoutY="57.0" prefHeight="17.0" prefWidth="142.0" text="Procurar por CPF:" />
+   </children>
+</Pane>

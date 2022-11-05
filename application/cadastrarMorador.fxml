@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="503.0" prefWidth="615.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.cadastrarMoradorController">
+   <children>
+      <Label layoutX="14.0" layoutY="14.0" text="Cadastrar Morador">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="14.0" layoutY="56.0" prefHeight="17.0" prefWidth="39.0" text="Nome:" />
+      <TextField fx:id="nome" layoutX="53.0" layoutY="52.0" />
+      <Label layoutX="14.0" layoutY="89.0" prefHeight="17.0" prefWidth="39.0" text="CPF:" />
+      <TextField fx:id="cpf" layoutX="53.0" layoutY="85.0" />
+      <Label layoutX="14.0" layoutY="123.0" prefHeight="17.0" prefWidth="39.0" text="RG:" />
+      <TextField fx:id="rg" layoutX="53.0" layoutY="119.0" />
+      <Label layoutX="380.0" layoutY="85.0" prefHeight="17.0" prefWidth="116.0" text="Data de Nascimento:" />
+      <TextField fx:id="dataNasc" layoutX="380.0" layoutY="102.0" />
+      <Label layoutX="14.0" layoutY="154.0" prefHeight="17.0" prefWidth="39.0" text="Email:" />
+      <TextField fx:id="email" layoutX="53.0" layoutY="150.0" />
+      <Label layoutX="219.0" layoutY="37.0" prefHeight="17.0" prefWidth="116.0" text="Tel. Residencial:" />
+      <TextField fx:id="tel_Residencial" layoutX="219.0" layoutY="54.0" />
+      <Label layoutX="219.0" layoutY="85.0" prefHeight="17.0" prefWidth="116.0" text="Tel. Comercial:" />
+      <TextField fx:id="tel_Comercial" layoutX="219.0" layoutY="102.0" />
+      <Label layoutX="380.0" layoutY="37.0" prefHeight="17.0" prefWidth="116.0" text="Tel. Celular:" />
+      <TextField fx:id="tel_Celular" layoutX="380.0" layoutY="54.0" />
+      <Label layoutX="219.0" layoutY="134.0" prefHeight="17.0" prefWidth="116.0" text="Apartamento:" />
+      <TextField fx:id="ap" layoutX="219.0" layoutY="151.0" />
+      <Label layoutX="380.0" layoutY="134.0" prefHeight="17.0" prefWidth="116.0" text="Bloco:" />
+      <TextField fx:id="bloco" layoutX="380.0" layoutY="151.0" />
+      <CheckBox fx:id="desejaIncluir" alignment="CENTER" layoutX="14.0" layoutY="225.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="473.0" text="Autorizo inclusão no grupo de WhatsApp do condomínio do meu número de celular" />
+      <Button fx:id="prox" layoutX="529.0" layoutY="459.0" mnemonicParsing="false" onAction="#submit" text="Próximo" />
+      <Button fx:id="quit" layoutX="577.0" layoutY="20.0" mnemonicParsing="false" onAction="#returnToMainPage" text="X" />
+      <RadioButton fx:id="prop" layoutX="77.0" layoutY="196.0" mnemonicParsing="false" onAction="#lockTextField" text="Propietário">
+         <toggleGroup>
+            <ToggleGroup fx:id="situacao" />
+         </toggleGroup>
+      </RadioButton>
+      <RadioButton fx:id="loc" layoutX="172.0" layoutY="196.0" mnemonicParsing="false" onAction="#unlockTextField" text="Locatário" toggleGroup="$situacao" />
+      <Label layoutX="12.0" layoutY="196.0" prefHeight="17.0" prefWidth="51.0" text="Situação:" />
+      <Label layoutX="14.0" layoutY="274.0" prefHeight="17.0" prefWidth="160.0" text="Caso seja Locatário, informar:" />
+      <Label layoutX="14.0" layoutY="302.0" prefHeight="17.0" prefWidth="116.0" text="Data da Mudança:" />
+      <TextField fx:id="dataMudanca" disable="true" layoutX="15.0" layoutY="319.0" />
+      <Label layoutX="14.0" layoutY="356.0" prefHeight="17.0" prefWidth="138.0" text="Data do fim do contrato:" />
+      <TextField fx:id="dataFim" disable="true" layoutX="15.0" layoutY="373.0" />
+      <Label layoutX="185.0" layoutY="302.0" prefHeight="17.0" prefWidth="116.0" text="Nome da Empresa:" />
+      <TextField fx:id="empresa" disable="true" layoutX="186.0" layoutY="319.0" />
+      <Label layoutX="185.0" layoutY="356.0" prefHeight="17.0" prefWidth="116.0" text="Pessoa para contato:" />
+      <TextField fx:id="contato" disable="true" layoutX="186.0" layoutY="373.0" />
+      <Label layoutX="352.0" layoutY="356.0" prefHeight="17.0" prefWidth="51.0" text="Telefone:" />
+      <TextField fx:id="telContato" disable="true" layoutX="353.0" layoutY="373.0" />
+   </children>
+</Pane>

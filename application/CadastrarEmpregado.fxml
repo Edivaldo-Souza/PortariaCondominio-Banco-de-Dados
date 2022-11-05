@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="592.0" prefWidth="892.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.CadastrarEmpregadoController">
+   <children>
+      <Label layoutX="27.0" layoutY="17.0" text="Cadastrar  Empregados">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="44.0" layoutY="59.0" prefHeight="17.0" prefWidth="39.0" text="Nome:" />
+      <TextField fx:id="nome" layoutX="83.0" layoutY="55.0" />
+      <Label layoutX="446.0" layoutY="59.0" prefHeight="17.0" prefWidth="115.0" text="RG:" />
+      <TextField fx:id="rg" layoutX="471.0" layoutY="55.0" />
+      <Label fx:id="rotuloNome" alignment="CENTER" layoutX="104.0" layoutY="147.0" prefHeight="17.0" prefWidth="208.0" text="Nome" />
+      <Label fx:id="rotuloRG" alignment="CENTER" layoutX="313.0" layoutY="147.0" prefHeight="17.0" prefWidth="176.0" text="RG" />
+      <Label fx:id="rotuloCargo" alignment="CENTER" layoutX="492.0" layoutY="147.0" prefHeight="17.0" prefWidth="202.0" text="Turno" />
+      <ScrollPane layoutX="48.0" layoutY="168.0" prefHeight="202.0" prefWidth="791.0">
+         <content>
+            <Pane fx:id="painel" prefHeight="201.0" prefWidth="792.0" />
+         </content>
+      </ScrollPane>
+      <Label layoutX="245.0" layoutY="59.0" prefHeight="17.0" prefWidth="66.0" text="Cargo:" />
+      <TextField fx:id="cargo" layoutX="285.0" layoutY="55.0" />
+      <Label fx:id="rotuloID" alignment="CENTER" layoutX="48.0" layoutY="147.0" prefHeight="17.0" prefWidth="61.0" text="ID" />
+      <Button layoutX="783.0" layoutY="132.0" mnemonicParsing="false" onAction="#adicionar" prefHeight="27.0" prefWidth="46.0" text="+">
+         <font>
+            <Font name="DeVinne Txt BT" size="12.0" />
+         </font>
+      </Button>
+      <Button fx:id="quit" layoutX="834.0" layoutY="18.0" mnemonicParsing="false" onAction="#returnToMainPage" prefHeight="19.0" prefWidth="46.0" text="X" />
+      <Button layoutX="780.0" layoutY="382.0" mnemonicParsing="false" onAction="#salvarDados" text="Salvar">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Button>
+      <Button layoutX="730.0" layoutY="513.0" mnemonicParsing="false" onAction="#nextPage" text="Próximo">
+         <font>
+            <Font size="21.0" />
+         </font>
+      </Button>
+      <Label layoutX="53.0" layoutY="94.0" prefHeight="25.0" prefWidth="223.0" text="ID do Empregado Selecionado:">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <Label fx:id="id" layoutX="276.0" layoutY="94.0" prefHeight="25.0" prefWidth="18.0" text="...">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <Button layoutX="48.0" layoutY="381.0" mnemonicParsing="false" onAction="#exibir" prefHeight="20.0" prefWidth="170.0" text="Consultar">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Button>
+      <RadioButton fx:id="integral" layoutX="667.0" layoutY="59.0" mnemonicParsing="false" text="Integral">
+         <toggleGroup>
+            <ToggleGroup fx:id="turnos" />
+         </toggleGroup>
+      </RadioButton>
+      <RadioButton fx:id="manha" layoutX="667.0" layoutY="79.0" mnemonicParsing="false" text="Manhã" toggleGroup="$turnos" />
+      <RadioButton fx:id="tarde" layoutX="667.0" layoutY="98.0" mnemonicParsing="false" text="Tarde" toggleGroup="$turnos" />
+      <RadioButton fx:id="noite" layoutX="667.0" layoutY="117.0" mnemonicParsing="false" text="Noite" toggleGroup="$turnos" />
+      <Label layoutX="640.0" layoutY="36.0" prefHeight="17.0" prefWidth="39.0" text="Turno:" />
+      <Button layoutX="44.0" layoutY="507.0" mnemonicParsing="false" onAction="#previousPage" text="Anterior">
+         <font>
+            <Font size="21.0" />
+         </font>
+      </Button>
+   </children>
+</Pane>
